@@ -13,10 +13,7 @@ from sqlalchemy import (
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 # ================= CONFIG =================
-DATABASE_URL = os.environ.get("DATABASE_URL")
-if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://")
-
+DATABASE_URL = "postgresql://neondb_owner:npg_f2QbjSg6NKPr@ep-red-waterfall-ai08u6re-pooler.c-4.us-east-1.aws.neon.tech/neon_ydb?sslmode=require&channel_binding=require"
 MAX_RECORDS_PER_DEVICE = 1000
 
 # ================= SQLALCHEMY =================
